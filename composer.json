@@ -14,10 +14,7 @@
             "role": "Developer"
         }
     ],
-    "require": {
-		"ext-amqp": ">=1.0.0"           
-    },
     "autoload": {
-        "classmap": ["celery.php"]
+        "classmap": ["celery-amqphp.php"]
     }
 }
