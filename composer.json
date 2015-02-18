@@ -14,7 +14,10 @@
             "role": "Developer"
         }
     ],
+    "require" : {
+        "videlalvaro/php-amqplib": "2.2.*"
+    },
     "autoload": {
-        "classmap": ["celery-amqphp.php"]
+        "classmap": ["celery-phpamqplib.php"]
     }
 }
