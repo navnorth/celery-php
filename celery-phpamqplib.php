@@ -103,7 +103,6 @@ class Celery
 	 */
 	function PostTask($task, $args)
 	{
-		$this->connection->connect();
 		if(!is_array($args))
 		{
 			throw new CeleryException("Args should be an array");
@@ -141,7 +140,7 @@ class Celery
 			'content_encoding' => 'UTF-8',
 		));
 
-		$success = $ch->basic_public($msg, $exchange, $routingKey);
+		$success = $ch->basic_publish($msg, $exchange, $routingKey);
 
 		$ch->close();
 
