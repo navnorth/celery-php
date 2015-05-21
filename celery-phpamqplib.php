@@ -73,15 +73,6 @@ class Celery
 		#$success = $this->connection->connect();
 	}
 
-	function __destruct()
-	{
-		if($this->connection)
-		{
-			$this->connection->close();
-			$this->connection = null;
-		}
-	}
-
 	static function InitializeAMQPConnection($details)
 	{
 		$connection = new \PhpAmqpLib\Connection\AMQPConnection(
